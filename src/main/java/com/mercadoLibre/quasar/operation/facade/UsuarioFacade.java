@@ -1,7 +1,5 @@
 package com.mercadoLibre.quasar.operation.facade;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -16,33 +14,18 @@ public class UsuarioFacade implements UsuarioRepository{
 	private UsuarioCrudRepository crudRepository;
 
 	@Override
-	public <S extends Usuario> S save(S entity) {
+	public Usuario save(Usuario entity) {
 		return crudRepository.save(entity);
 	}
 
 	@Override
-	public <S extends Usuario> Iterable<S> saveAll(Iterable<S> entities) {
-		return null;
-	}
-
-	@Override
 	public Usuario findByUsuarioIdAndClave(Integer id, String clave) {
-		return crudRepository.findByUsuarioIdAndClave(id, clave).get();
+		return crudRepository.findByUsuarioIdAndClave(id, clave);
 	}
 
 	@Override
 	public boolean existsByUsuarioId(Integer id) {
 		return crudRepository.existsById(id);
-	}
-
-	@Override
-	public List<Usuario> findAll() {
-		return null;
-	}
-
-	@Override
-	public long count() {
-		return 0;
 	}
 
 	@Override
@@ -57,7 +40,12 @@ public class UsuarioFacade implements UsuarioRepository{
 
 	@Override
 	public Usuario findByUsuarioId(Integer id) {
-		return crudRepository.findByUsuarioId(id).get();
+		return crudRepository.findByUsuarioId(id);
+	}
+
+	@Override
+	public long count() {
+		return 0;
 	}
 
 

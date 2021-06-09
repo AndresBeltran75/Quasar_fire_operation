@@ -12,7 +12,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Component;
 
-import com.mercadoLibre.quasar.operation.entity.Usuario;
+import com.mercadoLibre.quasar.operation.dto.UsuarioTO;
 import com.mercadoLibre.quasar.operation.service.UsuarioService;
 import com.mercadoLibre.quasar.operation.utilidades.Constantes;
 
@@ -31,7 +31,7 @@ public class UserConfiguration implements AuthenticationProvider{
 	public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 		String user = authentication.getName();
 		String pass = authentication.getCredentials().toString();
-		Usuario auth = usuarioService.getUsuario(Integer.parseInt(user), pass);
+		UsuarioTO auth = usuarioService.getUsuario(Integer.parseInt(user), pass);
     	if(auth != null) {
     		return new UsernamePasswordAuthenticationToken(user, pass, AUTHORITIES); 		
     	}else {

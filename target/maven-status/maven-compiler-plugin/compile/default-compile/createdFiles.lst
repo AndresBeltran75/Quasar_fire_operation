@@ -1,10 +1,12 @@
 com/mercadoLibre/quasar/operation/to/requestTO.class
 com/mercadoLibre/quasar/operation/configuration/SecurityConfiguration.class
+com/mercadoLibre/quasar/operation/dto/UsuarioTO.class
 com/mercadoLibre/quasar/operation/interfac/IwsTopSecretSplit.class
 com/mercadoLibre/quasar/operation/utilidades/Constantes.class
 com/mercadoLibre/quasar/operation/interfac/IwsUsuarios.class
 com/mercadoLibre/quasar/operation/to/ResponseSplitTO.class
 com/mercadoLibre/quasar/operation/ServletInitializer.class
+com/mercadoLibre/quasar/operation/mapper/UsuarioMapperImpl.class
 com/mercadoLibre/quasar/operation/configuration/SwaggerConfiguration.class
 com/mercadoLibre/quasar/operation/to/ResponseTO.class
 com/mercadoLibre/quasar/operation/interfac/IwsTopSecret.class
@@ -18,6 +20,7 @@ com/mercadoLibre/quasar/operation/ws/wsTopSecret.class
 com/mercadoLibre/quasar/operation/utilidades/ObtenerMensaje.class
 com/mercadoLibre/quasar/operation/ws/wsTopSecretSplit.class
 com/mercadoLibre/quasar/operation/to/quasarTO.class
+com/mercadoLibre/quasar/operation/mapper/UsuarioMapper.class
 com/mercadoLibre/quasar/operation/utilidades/CalculoCircunferencia.class
 com/mercadoLibre/quasar/operation/to/PuntoTO.class
 com/mercadoLibre/quasar/operation/to/CircunferenciaTO.class
