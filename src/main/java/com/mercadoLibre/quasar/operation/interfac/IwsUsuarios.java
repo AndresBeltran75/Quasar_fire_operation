@@ -1,0 +1,26 @@
+package com.mercadoLibre.quasar.operation.interfac;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.mercadoLibre.quasar.operation.entity.Usuario;
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+
+@RequestMapping("/usuarios")
+@Api(value = "Web service get information user")
+public interface IwsUsuarios {
+
+	@GetMapping("/consulta")
+	@ApiOperation(value = "get information user")
+	@ApiResponses({
+		@ApiResponse(code = 200, message = "OK"),
+		@ApiResponse(code = 400, message = "Not Found")
+	})
+	public ResponseEntity<Usuario> obtenerUsuario(Integer usuarioId);
+	
+}
