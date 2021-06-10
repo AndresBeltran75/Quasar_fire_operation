@@ -14,6 +14,7 @@
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/requestTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/interfac/IwsUsuarios.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/CircunferenciaTO.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/UsuarioTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/PositionTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/ResponseSplitTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/interfac/IwsTopSecretSplit.java
@@ -22,5 +23,6 @@
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/quasarTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/configuration/SwaggerConfiguration.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/utilidades/Constantes.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/mapper/UsuarioMapper.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/configuration/SecurityConfiguration.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/utilidades/CalculoCircunferencia.java
