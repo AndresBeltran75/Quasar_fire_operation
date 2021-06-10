@@ -4,11 +4,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
 import com.mercadoLibre.quasar.operation.to.quasarTO;
 
-@Repository
+@Component
 public class ObtenerMensaje {
 	
 	public String GetMessage(List<quasarTO> listQuasarTO) {

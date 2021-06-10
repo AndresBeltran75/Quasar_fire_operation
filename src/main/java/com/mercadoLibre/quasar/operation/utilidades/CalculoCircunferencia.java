@@ -1,11 +1,11 @@
 package com.mercadoLibre.quasar.operation.utilidades;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Component;
 
 import com.mercadoLibre.quasar.operation.to.CircunferenciaTO;
 import com.mercadoLibre.quasar.operation.to.PuntoTO;
 
-@Repository
+@Component
 public class CalculoCircunferencia {
 	
 	public CircunferenciaTO calcularCentro(PuntoTO x1, PuntoTO x2, PuntoTO x3) {
