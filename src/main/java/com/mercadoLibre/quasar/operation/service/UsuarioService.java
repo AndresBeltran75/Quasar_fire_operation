@@ -17,10 +17,6 @@ public class UsuarioService {
 	public Usuario save(Usuario usuario) {
 		return usuarioRepository.save(usuario);
 	}
-	
-    public List<Usuario> getAll() {
-        return usuarioRepository.findAll();
-    }
 
     public Usuario getUsuario(int user, String pass) {
         return usuarioRepository.findByUsuarioIdAndClave(user, pass);
