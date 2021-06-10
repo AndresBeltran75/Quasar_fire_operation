@@ -4,7 +4,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mercadoLibre.quasar.operation.entity.Usuario;
+import com.mercadoLibre.quasar.operation.to.UsuarioTO;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -21,6 +21,6 @@ public interface IwsUsuarios {
 		@ApiResponse(code = 200, message = "OK"),
 		@ApiResponse(code = 400, message = "Not Found")
 	})
-	public ResponseEntity<Usuario> obtenerUsuario(Integer usuarioId);
+	public ResponseEntity<UsuarioTO> obtenerUsuario(Integer usuarioId);
 	
 }
