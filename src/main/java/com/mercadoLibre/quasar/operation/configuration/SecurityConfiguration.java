@@ -21,14 +21,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 		auth.authenticationProvider(configurationUser);
 	}
 	
-	
-	
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().anyRequest().authenticated()
         .and().httpBasic().and().csrf().disable();
-
-        //http.addFilterBefore(jwtFilterRequest, UsernamePasswordAuthenticationFilter.class);
     }
 	
     @Override
