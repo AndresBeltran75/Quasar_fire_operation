@@ -22,9 +22,7 @@ import com.mercadoLibre.quasar.operation.utilidades.Constantes;
 import com.mercadoLibre.quasar.operation.utilidades.ObtenerMensaje;
 
 @RestController
-public class wsTopSecretSplit extends Exception implements IwsTopSecretSplit{
-	
-	private static final long serialVersionUID = 1L;
+public class wsTopSecretSplit implements IwsTopSecretSplit{
 
 	@Autowired
 	CalculoCircunferencia calculoCircunferencia;

@@ -14,6 +14,7 @@ com/mercadoLibre/quasar/operation/repository/UsuarioCrudRepository.class
 com/mercadoLibre/quasar/operation/QuasarOperationApplication.class
 com/mercadoLibre/quasar/operation/entity/Usuario.class
 com/mercadoLibre/quasar/operation/facade/UsuarioFacade.class
+com/mercadoLibre/quasar/operation/to/UsuarioTO.class
 com/mercadoLibre/quasar/operation/to/PositionTO.class
 com/mercadoLibre/quasar/operation/ws/wsUsuarios.class
 com/mercadoLibre/quasar/operation/ws/wsTopSecret.class

@@ -13,8 +13,9 @@
 	<version>1.0</version>
 	<name>quasarFireOperation</name>
 	<description>challenge quasar operation</description>
+	<packaging>war</packaging>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 	

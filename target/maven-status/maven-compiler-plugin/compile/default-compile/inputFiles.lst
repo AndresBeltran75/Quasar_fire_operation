@@ -14,10 +14,17 @@
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/requestTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/interfac/IwsUsuarios.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/CircunferenciaTO.java
+<<<<<<< HEAD
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/PositionTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/ResponseSplitTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/interfac/IwsTopSecretSplit.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/dto/UsuarioTO.java
+=======
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/UsuarioTO.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/PositionTO.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/ResponseSplitTO.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/interfac/IwsTopSecretSplit.java
+>>>>>>> final
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/ServletInitializer.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/ResponseTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/quasarTO.java
