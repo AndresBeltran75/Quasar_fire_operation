@@ -3,8 +3,6 @@ package com.mercadoLibre.quasar.operation.service;
 import com.mercadoLibre.quasar.operation.entity.Usuarios;
 
 public interface IUsuarioService {
-
-	Usuarios save(Usuarios usuario);
 	
 	Usuarios getUsuario(int user, String pass);
 	

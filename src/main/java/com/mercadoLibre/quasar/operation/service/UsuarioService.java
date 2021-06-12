@@ -11,10 +11,6 @@ public class UsuarioService implements IUsuarioService{
 
 	@Autowired
 	private IUsuarioRepository usuarioRepository;
-	
-	public Usuarios save(Usuarios usuario) {
-		return usuarioRepository.save(usuario);
-	}
 
     public Usuarios getUsuario(int user, String pass) {
         return usuarioRepository.findByUsuarioIdAndClave(user, pass);
