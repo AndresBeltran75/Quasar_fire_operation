@@ -18,7 +18,7 @@ import io.swagger.annotations.ApiResponses;
 public interface IwsTopSecret {
 
 	@GetMapping("/status")
-	@ApiOperation(value = "Get status service")
+	@ApiOperation(value = "Get status service to determine if it is active")
 	@ApiResponses({
 		@ApiResponse(code = 200, message = "OK"),
 		@ApiResponse(code = 400, message = "Not Found")
@@ -26,7 +26,7 @@ public interface IwsTopSecret {
 	public String status();
 	
 	@PostMapping("/")
-	@ApiOperation(value = "Get responde top secret service")
+	@ApiOperation(value = "Get top secret service response for a specific vessel")
 	@ApiResponses({
 		@ApiResponse(code = 200, message = "OK"),
 		@ApiResponse(code = 400, message = "Not Found")

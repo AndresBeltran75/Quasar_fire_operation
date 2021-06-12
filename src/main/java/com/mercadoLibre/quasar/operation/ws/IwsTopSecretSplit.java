@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiResponses;
 public interface IwsTopSecretSplit {
 
 	@GetMapping("/status")
-	@ApiOperation(value = "Get status service")
+	@ApiOperation(value = "Get status service to determine if it is active")
 	@ApiResponses({
 		@ApiResponse(code = 200, message = "OK"),
 		@ApiResponse(code = 400, message = "Not Found")
@@ -28,7 +28,7 @@ public interface IwsTopSecretSplit {
 	public String status();
 	
 	@GetMapping("/")
-	@ApiOperation(value = "Get responde top secret split service")
+	@ApiOperation(value = "Get top secret split service service response")
 	@ApiResponses({
 		@ApiResponse(code = 200, message = "OK"),
 		@ApiResponse(code = 400, message = "Not Found")
@@ -44,7 +44,7 @@ public interface IwsTopSecretSplit {
 	public ResponseTO datosPorSaltelite(@RequestBody quasarTO request);
 	
 	@PostMapping("/{satellite_name}")
-	@ApiOperation(value = "Get responde top secret split service for satellite name")
+	@ApiOperation(value = "Get top secret split service response for a specific vessel")
 	@ApiResponses({
 		@ApiResponse(code = 200, message = "OK"),
 		@ApiResponse(code = 400, message = "Not Found")
