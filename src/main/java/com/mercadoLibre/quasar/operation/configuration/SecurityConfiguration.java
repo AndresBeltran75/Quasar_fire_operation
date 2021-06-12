@@ -18,7 +18,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	
 	@Autowired
 	public void configure(AuthenticationManagerBuilder auth) throws Exception{
-		auth.authenticationProvider(configurationUser);
+		auth.userDetailsService(configurationUser);
 	}
 	
     @Override
