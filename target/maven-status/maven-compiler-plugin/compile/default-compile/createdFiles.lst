@@ -10,6 +10,7 @@ com/mercadoLibre/quasar/operation/mapper/UsuarioMapperImpl.class
 com/mercadoLibre/quasar/operation/configuration/SwaggerConfiguration.class
 com/mercadoLibre/quasar/operation/to/ResponseTO.class
 com/mercadoLibre/quasar/operation/interfac/IwsTopSecret.class
+com/mercadoLibre/quasar/operation/configuration/EncryptConfiguration.class
 com/mercadoLibre/quasar/operation/repository/UsuarioCrudRepository.class
 com/mercadoLibre/quasar/operation/QuasarOperationApplication.class
 com/mercadoLibre/quasar/operation/entity/Usuario.class

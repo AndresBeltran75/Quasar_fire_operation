@@ -2,12 +2,11 @@ package com.mercadoLibre.quasar.operation.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.mercadoLibre.quasar.operation.dto.UsuarioTO;
 import com.mercadoLibre.quasar.operation.entity.Usuario;
 
 public interface UsuarioCrudRepository extends CrudRepository<Usuario, Integer>{
 	
-	public Usuario save(UsuarioTO entity);
+	//public Usuario save(Usuario entity);
 
 	public Usuario findByUsuarioIdAndClave(Integer id, String clave);
 	
