@@ -1,4 +1,4 @@
-package com.mercadoLibre.quasar.operation.interfac;
+package com.mercadoLibre.quasar.operation.ws;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

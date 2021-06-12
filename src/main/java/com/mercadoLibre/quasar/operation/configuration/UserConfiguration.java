@@ -12,7 +12,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.mercadoLibre.quasar.operation.entity.Usuario;
+import com.mercadoLibre.quasar.operation.entity.Usuarios;
 import com.mercadoLibre.quasar.operation.service.UsuarioService;
 import com.mercadoLibre.quasar.operation.utilidades.Constantes;
 
@@ -29,7 +29,7 @@ public class UserConfiguration implements UserDetailsService{
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Usuario auth = usuarioService.getUsuarioId(Integer.parseInt(username));
+		Usuarios auth = usuarioService.getUsuarioId(Integer.parseInt(username));
 		UserDetails detalle = new User(auth.getUsuarioId().toString(),auth.getClave(), AUTHORITIES);
 		return detalle;
 	}

@@ -1,30 +1,30 @@
 package com.mercadoLibre.quasar.operation.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-import com.mercadoLibre.quasar.operation.entity.Usuario;
-import com.mercadoLibre.quasar.operation.repository.UsuarioRepository;
+import com.mercadoLibre.quasar.operation.entity.Usuarios;
+import com.mercadoLibre.quasar.operation.repository.IUsuarioRepository;
 
-@Component
-public class UsuarioService {
+@Service
+public class UsuarioService implements IUsuarioService{
 
 	@Autowired
-	private UsuarioRepository usuarioRepository;
+	private IUsuarioRepository usuarioRepository;
 	
-	public Usuario save(Usuario usuario) {
+	public Usuarios save(Usuarios usuario) {
 		return usuarioRepository.save(usuario);
 	}
 
-    public Usuario getUsuario(int user, String pass) {
+    public Usuarios getUsuario(int user, String pass) {
         return usuarioRepository.findByUsuarioIdAndClave(user, pass);
     }
     
-    public Usuario getUsuarioId(int user) {
+    public Usuarios getUsuarioId(int user) {
         return usuarioRepository.findByUsuarioId(user);
     }
 
-    public boolean delete(Usuario usuarioId) {
+    public boolean delete(Usuarios usuarioId) {
     	if(getUsuarioId(usuarioId.getUsuarioId()) != null) {
     		usuarioRepository.delete(usuarioId);
     		return true;

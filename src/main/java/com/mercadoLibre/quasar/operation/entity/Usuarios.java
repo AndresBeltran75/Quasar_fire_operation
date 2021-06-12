@@ -7,29 +7,33 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+
+import com.sun.istack.NotNull;
 
 @Entity
-@Table(name = "usuarios")
-public class Usuario {
+public class Usuarios {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "usuario_id")
+	@NotNull
+	@Column(name = "usuario_id", length = 20)
 	private Integer usuarioId;
 	
-	@Column(name = "primer_apellido")
+	@NotNull
+	@Column(name = "primer_apellido", length = 50)
 	private String primerApellido;
 	
-	@Column(name = "segundo_apellido")
+	@Column(name = "segundo_apellido", length = 50)
 	private String segundoApellido;
 	
-	@Column(name = "primer_nombre")
+	@NotNull
+	@Column(name = "primer_nombre", length = 50)
 	private String primerNombre;
 	
-	@Column(name = "segundo_nombre")
+	@Column(name = "segundo_nombre", length = 50)
 	private String segundoNombre;
 	
+	@NotNull
 	@Column(name = "fecha_creacion")
 	private Date fechaCreacion;
 	
@@ -39,11 +43,15 @@ public class Usuario {
 	@Column(name = "fecha_modificacion")
 	private Date fechaModificacion;
 	
-	@Column(name = "usuario_modificacion")
+	@Column(name = "usuario_modificacion", length = 50)
 	private String usuarioModificacion;
 	
+	@NotNull
+	@Column(name = "estado", length = 10)
 	private String estado;
 
+	@NotNull
+	@Column(name = "clave", length = 400)
 	private String clave;
 	
 	public Integer getUsuarioId() {

@@ -9,21 +9,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import com.mercadoLibre.quasar.operation.entity.Usuario;
-import com.mercadoLibre.quasar.operation.facade.UsuarioFacade;
+import com.mercadoLibre.quasar.operation.entity.Usuarios;
+import com.mercadoLibre.quasar.operation.repository.IUsuarioRepository;
 
 @SpringBootTest
-class wsUsuariosTest {
+class wsUsuariosImplTest {
 
 	@Autowired
-	UsuarioFacade service;
+	IUsuarioRepository service;
 	
 	@Autowired
 	BCryptPasswordEncoder encoder;
 	
 	@Test
 	public void crearUsuario() {
-		Usuario user = new Usuario();
+		Usuarios user = new Usuarios();
 		user.setUsuarioId(Integer.parseInt("1"));
 		user.setClave(encoder.encode("Colombia2021*"));
 		user.setEstado("ACTIVO");
@@ -35,7 +35,7 @@ class wsUsuariosTest {
 		user.setUsuarioCreacion("POR07183");
 		user.setFechaModificacion(new Date());
 		user.setUsuarioModificacion("POR02185");
-		Usuario salida = service.save(user);
+		Usuarios salida = service.save(user);
 		assertTrue(salida.getClave().equalsIgnoreCase(user.getClave()));
 	}
 

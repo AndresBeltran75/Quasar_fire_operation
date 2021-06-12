@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.mercadoLibre.quasar.operation.interfac.IwsTopSecret;
 import com.mercadoLibre.quasar.operation.to.CircunferenciaTO;
 import com.mercadoLibre.quasar.operation.to.PositionTO;
 import com.mercadoLibre.quasar.operation.to.PuntoTO;
@@ -14,7 +13,7 @@ import com.mercadoLibre.quasar.operation.utilidades.CalculoCircunferencia;
 import com.mercadoLibre.quasar.operation.utilidades.ObtenerMensaje;
 
 @RestController
-public class wsTopSecret implements IwsTopSecret{
+public class wsTopSecretImpl implements IwsTopSecret{
 	
 	@Autowired
 	CalculoCircunferencia calculoCircunferencia;

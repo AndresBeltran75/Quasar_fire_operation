@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.mercadoLibre.quasar.operation.interfac.IwsTopSecretSplit;
 import com.mercadoLibre.quasar.operation.to.CircunferenciaTO;
 import com.mercadoLibre.quasar.operation.to.PositionTO;
 import com.mercadoLibre.quasar.operation.to.PuntoTO;
@@ -22,7 +21,7 @@ import com.mercadoLibre.quasar.operation.utilidades.Constantes;
 import com.mercadoLibre.quasar.operation.utilidades.ObtenerMensaje;
 
 @RestController
-public class wsTopSecretSplit implements IwsTopSecretSplit{
+public class wsTopSecretSplitImpl implements IwsTopSecretSplit{
 
 	@Autowired
 	CalculoCircunferencia calculoCircunferencia;
