@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RequestMapping("topsecret")
-@Api(value = "Web service top secret")
+@Api(description = "Web service top secret")
 public interface IwsTopSecret {
 
 	@GetMapping("/status")

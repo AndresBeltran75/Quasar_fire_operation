@@ -10,7 +10,7 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
 @RequestMapping("/usuarios")
-@Api(value = "Web service get information user")
+@Api(description = "Web service get information user")
 public interface IwsUsuarios {
 
 	@GetMapping("/consulta")
