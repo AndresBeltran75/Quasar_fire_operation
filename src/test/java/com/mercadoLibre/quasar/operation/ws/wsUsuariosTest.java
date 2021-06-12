@@ -24,16 +24,19 @@ class wsUsuariosTest {
 	@Test
 	public void crearUsuario() {
 		Usuario user = new Usuario();
-		user.setClave(encoder.encode("MeliPassPrb"));
+		user.setUsuarioId(Integer.parseInt("1"));
+		user.setClave(encoder.encode("Colombia2021*"));
 		user.setEstado("ACTIVO");
 		user.setFechaCreacion(new Date());
-		user.setPrimerApellido("NOVOA");
-		user.setSegundoApellido("BOHORQUEZ");
-		user.setPrimerNombre("JENNY");
-		user.setSegundoNombre("LORENA");
+		user.setPrimerApellido("BELTRAN");
+		user.setSegundoApellido("CASTELLANOS");
+		user.setPrimerNombre("FIDEL");
+		user.setSegundoNombre("ANDRES");
 		user.setUsuarioCreacion("POR07183");
-		//Usuario salida = service.save(user);
-		assertTrue(user.getClave().equalsIgnoreCase(user.getClave()));
+		user.setFechaModificacion(new Date());
+		user.setUsuarioModificacion("POR02185");
+		Usuario salida = service.save(user);
+		assertTrue(salida.getClave().equalsIgnoreCase(user.getClave()));
 	}
 
 }
