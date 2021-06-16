@@ -29,8 +29,8 @@ public class UserConfiguration implements UserDetailsService{
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		Usuarios auth = usuarioService.getUsuarioId(Integer.parseInt(username));
-		UserDetails detalle = new User(auth.getUsuarioId().toString(),auth.getClave(), AUTHORITIES);
+		Usuarios auth = usuarioService.getNombreUsuario(username);
+		UserDetails detalle = new User(auth.getNombreUsuario(),auth.getClave(), AUTHORITIES);
 		return detalle;
 	}
 	

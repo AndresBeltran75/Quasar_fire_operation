@@ -11,6 +11,8 @@ public interface IUsuarioRepository extends JpaRepository<Usuarios, Integer>{
 	Usuarios findByUsuarioIdAndClave(Integer id, String clave);
 	
 	Usuarios findByUsuarioId(Integer id);
+	
+	Usuarios findByNombreUsuario(String nombreUsuario);
 
 	void deleteByUsuarioId(Integer id);
 

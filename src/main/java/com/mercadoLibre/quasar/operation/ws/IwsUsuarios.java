@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.mercadoLibre.quasar.operation.entity.Usuarios;
+import com.mercadoLibre.quasar.operation.to.CreacionUsuarioTO;
 import com.mercadoLibre.quasar.operation.to.UsuarioTO;
 
 import io.swagger.annotations.Api;
@@ -32,6 +32,6 @@ public interface IwsUsuarios {
 		@ApiResponse(code = 200, message =  "OK"),
 		@ApiResponse(code = 400, message = "Not Found")
 	})
-	public ResponseEntity<UsuarioTO> crearUsuario(@RequestBody Usuarios user);
+	public ResponseEntity<UsuarioTO> crearUsuario(@RequestBody CreacionUsuarioTO user);
 	
 }

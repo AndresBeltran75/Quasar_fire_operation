@@ -6,6 +6,7 @@
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/utilidades/ObtenerMensaje.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/utilidades/JwtFilter.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/QuasarOperationApplication.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/CreacionUsuarioTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/ws/IwsUsuarios.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/requestTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/ws/wsTopSecretSplitImpl.java

@@ -20,6 +20,10 @@ public class Usuarios {
 	private Integer usuarioId;
 	
 	@NotNull
+	@Column(name = "nombre_usuario", length = 100)
+	private String nombreUsuario;
+	
+	@NotNull
 	@Column(name = "primer_apellido", length = 50)
 	private String primerApellido;
 	
@@ -140,6 +144,14 @@ public class Usuarios {
 
 	public void setClave(String clave) {
 		this.clave = clave;
+	}
+
+	public String getNombreUsuario() {
+		return nombreUsuario;
+	}
+
+	public void setNombreUsuario(String nombreUsuario) {
+		this.nombreUsuario = nombreUsuario;
 	}
 	
 }

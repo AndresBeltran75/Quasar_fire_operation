@@ -15,6 +15,8 @@ public class UsuarioTO implements Serializable{
 	
 	@ApiModelProperty(value = "Identificador usuario")
 	private Integer idUsuario;
+	@ApiModelProperty(value = "Nombre usuario")
+	private String nombreUsuario;
 	@ApiModelProperty(value = "Primer apellido usuario")
 	private String apellidoUno;
 	@ApiModelProperty(value = "Segundo apellido usuario")
@@ -102,6 +104,12 @@ public class UsuarioTO implements Serializable{
 	}
 	public void setPwd(String pwd) {
 		this.pwd = pwd;
+	}
+	public String getNombreUsuario() {
+		return nombreUsuario;
+	}
+	public void setNombreUsuario(String nombreUsuario) {
+		this.nombreUsuario = nombreUsuario;
 	}
 
 }

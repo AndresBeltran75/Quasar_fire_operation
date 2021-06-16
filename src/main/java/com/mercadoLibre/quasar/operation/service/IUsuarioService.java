@@ -8,6 +8,8 @@ public interface IUsuarioService {
 	
 	Usuarios getUsuarioId(int user);
 	
+	Usuarios getNombreUsuario(String nombreUsuario);
+	
 	boolean delete(Usuarios usuarioId);
 	
 }

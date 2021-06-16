@@ -32,6 +32,7 @@ class wsUsuariosImplTest {
 	public void crearUsuario() {
 		Usuarios user = new Usuarios();
 		user.setUsuarioId(Integer.parseInt("1"));
+		user.setNombreUsuario("SAS00556");
 		user.setClave(encoder.encode("Colombia2021*"));
 		user.setEstado("ACTIVO");
 		user.setFechaCreacion(new Date());
@@ -40,8 +41,8 @@ class wsUsuariosImplTest {
 		user.setPrimerNombre("FIDEL");
 		user.setSegundoNombre("ANDRES");
 		user.setUsuarioCreacion("POR07183");
-		user.setFechaModificacion(new Date());
-		user.setUsuarioModificacion("POR02185");
+		user.setFechaModificacion(null);
+		user.setUsuarioModificacion(null);
 		Usuarios salida = service.save(user);
 		assertTrue(salida.getClave().equalsIgnoreCase(user.getClave()));
 	}
@@ -49,7 +50,7 @@ class wsUsuariosImplTest {
 	@Test
 	public void generarToken() {
 		AuthenticationRequest req = new AuthenticationRequest();
-		req.setUsername("1");
+		req.setUsername("SAS00556");
 		req.setPassword("Colombia2021*");
 		ResponseEntity<AuthenticationResponse> res = auth.createToken(req);
 		assertNotNull(res.getBody().getToken());

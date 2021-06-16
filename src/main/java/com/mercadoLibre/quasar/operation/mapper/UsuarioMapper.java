@@ -6,8 +6,8 @@ import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 import org.mapstruct.factory.Mappers;
 
-import com.mercadoLibre.quasar.operation.to.UsuarioTO;
 import com.mercadoLibre.quasar.operation.entity.Usuarios;
+import com.mercadoLibre.quasar.operation.to.UsuarioTO;
 
 @Mapper(componentModel = "spring")
 public interface UsuarioMapper {
@@ -15,7 +15,8 @@ public interface UsuarioMapper {
 	UsuarioMapper INSTANCE = Mappers.getMapper(UsuarioMapper.class);
 	
     @Mappings({
-        @Mapping(source = "usuarioId", target = "idUsuario"),
+        @Mapping(source = "usuarioId", target = "idUsuario", ignore = true),
+        @Mapping(source = "nombreUsuario", target = "nombreUsuario"),
         @Mapping(source = "primerApellido", target = "apellidoUno"),
         @Mapping(source = "segundoApellido", target = "apellidoDos"),
         @Mapping(source = "primerNombre", target = "nombreUno"),
@@ -30,7 +31,10 @@ public interface UsuarioMapper {
 	UsuarioTO usuarioToUsuarioDto(Usuarios usuario);
 
     @InheritInverseConfiguration
-    @Mapping(target = "clave", ignore = true)
+    @Mappings({
+    	@Mapping(target = "clave", ignore = true),
+    	@Mapping(target = "usuarioId", ignore = true)
+    })
     Usuarios toUsuario(UsuarioTO usuarioDto);
     
 }

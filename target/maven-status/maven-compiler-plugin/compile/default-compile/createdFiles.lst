@@ -8,6 +8,7 @@ com/mercadoLibre/quasar/operation/to/AuthenticationRequest.class
 com/mercadoLibre/quasar/operation/mapper/UsuarioMapperImpl.class
 com/mercadoLibre/quasar/operation/ws/wsTopSecretImpl.class
 com/mercadoLibre/quasar/operation/configuration/SwaggerConfiguration.class
+com/mercadoLibre/quasar/operation/to/CreacionUsuarioTO.class
 com/mercadoLibre/quasar/operation/repository/IUsuarioRepository.class
 com/mercadoLibre/quasar/operation/to/ResponseTO.class
 com/mercadoLibre/quasar/operation/entity/Usuarios.class
