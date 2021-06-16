@@ -27,7 +27,7 @@ public class wsTopSecretImpl implements IwsTopSecret{
 	}
 	
 	@Override
-	public ResponseTO mensaje(@RequestBody requestTO request) {
+	public ResponseTO mensaje(requestTO request) {
 		
 		String mensaje = null;
 		ResponseTO response = new ResponseTO();

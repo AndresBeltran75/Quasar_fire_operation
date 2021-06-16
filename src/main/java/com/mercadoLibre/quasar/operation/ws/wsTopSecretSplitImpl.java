@@ -5,8 +5,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -58,7 +56,7 @@ public class wsTopSecretSplitImpl implements IwsTopSecretSplit{
 	}
 	
 	@Override
-	public ResponseTO datosPorSaltelite(@RequestBody quasarTO request){
+	public ResponseTO datosPorSaltelite(quasarTO request){
 		
 		List<quasarTO> listQuasarTo = new ArrayList<quasarTO>();
 		listQuasarTo.add(request);
@@ -89,8 +87,7 @@ public class wsTopSecretSplitImpl implements IwsTopSecretSplit{
 	}
 	
 	@Override
-	public ResponseTO satelliteName(@PathVariable("satellite_name") String name,
-								    @RequestBody ResponseSplitTO responseSplitTO) {
+	public ResponseTO satelliteName(String name, ResponseSplitTO responseSplitTO) {
 
 		List<quasarTO> listQuasarTo = new ArrayList<quasarTO>();
 		ResponseTO salida = new ResponseTO();

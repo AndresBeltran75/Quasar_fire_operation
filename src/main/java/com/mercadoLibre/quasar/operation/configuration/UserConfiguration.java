@@ -13,14 +13,14 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.mercadoLibre.quasar.operation.entity.Usuarios;
-import com.mercadoLibre.quasar.operation.service.UsuarioService;
+import com.mercadoLibre.quasar.operation.service.IUsuarioService;
 import com.mercadoLibre.quasar.operation.utilidades.Constantes;
 
 @Service
 public class UserConfiguration implements UserDetailsService{
 	
 	@Autowired
-	private UsuarioService usuarioService;
+	private IUsuarioService usuarioService;
 	
 	private static final List<GrantedAuthority> AUTHORITIES = new ArrayList<GrantedAuthority>();
 	static {

@@ -7,5 +7,6 @@ public class Constantes {
 	public static final String SATELITE_SATO = "sato";
 	public static final String ROLE_USER = "USER";
 	public static final String ESTADO_ACTIVO = "ACTIVO";
+	public static final String CLAVE_SECRETA = "(M3liQu4s4rOp*)";
 
 }

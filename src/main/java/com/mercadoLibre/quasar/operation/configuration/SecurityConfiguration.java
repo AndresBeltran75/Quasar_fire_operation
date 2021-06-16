@@ -8,6 +8,7 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
@@ -30,10 +31,23 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter{
 	
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().anyRequest().authenticated()
-        .and().httpBasic().and().csrf().disable();
-        
-        http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+        http.
+        csrf().
+        disable().
+        authorizeRequests().
+        antMatchers("/auth/**",
+        		    "/v2/api-docs/**",
+        		    "/swagger**",
+        		    "/swagger-resources/**",
+        		    "/configuration/**").
+        permitAll().
+        anyRequest().authenticated().
+        and().
+        sessionManagement().
+        sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
+        http.
+        addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
     }
 	
     @Override

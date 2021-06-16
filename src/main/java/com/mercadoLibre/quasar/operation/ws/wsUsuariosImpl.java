@@ -28,7 +28,7 @@ public class wsUsuariosImpl implements IwsUsuarios{
 	BCryptPasswordEncoder encoder;
 	
 	@Override
-	public ResponseEntity<UsuarioTO> obtenerUsuario(@RequestParam Integer usuarioId) {
+	public ResponseEntity<UsuarioTO> obtenerUsuario(Integer usuarioId) {
 		return new ResponseEntity<UsuarioTO>(mapper.usuarioToUsuarioDto(repository.findByUsuarioId(usuarioId)), HttpStatus.OK);
 	}
 

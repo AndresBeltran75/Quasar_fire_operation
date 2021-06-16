@@ -4,13 +4,16 @@
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/ws/wsTopSecretImpl.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/configuration/UserConfiguration.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/utilidades/ObtenerMensaje.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/utilidades/JwtFilter.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/QuasarOperationApplication.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/ws/IwsUsuarios.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/requestTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/ws/wsTopSecretSplitImpl.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/AuthenticationResponse.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/CircunferenciaTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/UsuarioTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/PositionTO.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/ws/wsAuthenticationImpl.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/ResponseSplitTO.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/ServletInitializer.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/ResponseTO.java
@@ -21,7 +24,10 @@
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/configuration/SwaggerConfiguration.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/utilidades/Constantes.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/mapper/UsuarioMapper.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/utilidades/JWTUtil.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/ws/IwsAuthentication.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/configuration/SecurityConfiguration.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/utilidades/CalculoCircunferencia.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/ws/IwsTopSecretSplit.java
 /Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/service/IUsuarioService.java
+/Users/andresbeltran/Documents/Andrés-Proyectos/git/meli_quasar/Quasar_fire_operation/src/main/java/com/mercadoLibre/quasar/operation/to/AuthenticationRequest.java

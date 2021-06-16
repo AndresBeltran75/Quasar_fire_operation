@@ -1,5 +1,6 @@
 package com.mercadoLibre.quasar.operation.ws;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Date;
@@ -7,10 +8,13 @@ import java.util.Date;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.mercadoLibre.quasar.operation.entity.Usuarios;
 import com.mercadoLibre.quasar.operation.repository.IUsuarioRepository;
+import com.mercadoLibre.quasar.operation.to.AuthenticationRequest;
+import com.mercadoLibre.quasar.operation.to.AuthenticationResponse;
 
 @SpringBootTest
 class wsUsuariosImplTest {
@@ -20,6 +24,9 @@ class wsUsuariosImplTest {
 	
 	@Autowired
 	BCryptPasswordEncoder encoder;
+	
+	@Autowired
+	IwsAuthentication auth;
 	
 	@Test
 	public void crearUsuario() {
@@ -37,6 +44,15 @@ class wsUsuariosImplTest {
 		user.setUsuarioModificacion("POR02185");
 		Usuarios salida = service.save(user);
 		assertTrue(salida.getClave().equalsIgnoreCase(user.getClave()));
+	}
+	
+	@Test
+	public void generarToken() {
+		AuthenticationRequest req = new AuthenticationRequest();
+		req.setUsername("1");
+		req.setPassword("Colombia2021*");
+		ResponseEntity<AuthenticationResponse> res = auth.createToken(req);
+		assertNotNull(res.getBody().getToken());
 	}
 
 }
