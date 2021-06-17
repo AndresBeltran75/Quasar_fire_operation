@@ -27,7 +27,7 @@ https://quasar-operation-fire-meli.herokuapp.com/quasar-operation/api/auth/authe
 }
 ```
 
-* Seleccione el contenido que acompaña la etiqueta token sin las comillas y utilicelo en las peticiones que desee realizar. Este token tiene un tiempo de duración de 5 minutos. Tomando como ejemplo el token anterior, lo seleccionado se debe ver de la siguiente manera:
+* Seleccione el contenido que acompaña la etiqueta token sin las comillas y utilicelo en las peticiones que desee realizar. Este token tiene un tiempo de duración de 30 minutos. Tomando como ejemplo el token anterior, lo seleccionado se debe ver de la siguiente manera:
 ```
 eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNRUxJODYyNjMiLCJpYXQiOjE2MjM4ODY2OTgsImV4cCI6MTYyMzg4Njk5OH0.gCXafJEqhoxgyxCW05hAU-mqzQIM1LqySqaB3b_HyLw
 ```
