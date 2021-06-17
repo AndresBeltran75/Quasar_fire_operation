@@ -195,7 +195,9 @@ Los endpoint para consumir las utilidades del Api desde Postman son:
        
  * Ahora se puede refrescar la página, pudiendo visualizar la documentación del Api.
 
+# Observaciones
 
+* Luego de que evidencie el funcionamiento del Api, acceda a la extensión ***ModHeader*** de Google Chrome y desactive el check que aparece en color verde, para que no tenga problemas al momento de usar el navegador como lo hace normalmente.
 
 
 
