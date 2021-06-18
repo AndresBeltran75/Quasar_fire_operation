@@ -16,7 +16,7 @@ La generación del token para realizar peticiones de forma segura se puede hacer
 
 ```
     Nombre Usuario:  QuasarOperation*
-    Contraseña    :  MELI86263"
+    Contraseña    :  MELI86263
 ```
 
 * obtendrá el token para realizar las peticiones deseadas.
@@ -27,7 +27,7 @@ https://quasar-operation-fire-meli.herokuapp.com/quasar-operation/api/auth/authe
 ```
 {
     "password": "QuasarOperation*",
-    "username": "MELI86263
+    "username": "MELI86263"
 }
 ```
 
