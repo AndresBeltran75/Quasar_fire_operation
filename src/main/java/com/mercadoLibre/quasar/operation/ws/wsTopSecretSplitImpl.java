@@ -59,28 +59,31 @@ public class wsTopSecretSplitImpl implements IwsTopSecretSplit{
 	public ResponseTO datosPorSaltelite(quasarTO request){
 		
 		List<quasarTO> listQuasarTo = new ArrayList<quasarTO>();
-		listQuasarTo.add(request);
 		ResponseTO salida = new ResponseTO();
-		PositionTO positionTO = new PositionTO();
-		String mensaje = obtenerMensaje.GetMessage(listQuasarTo);
 		
-		if( request.getName().equalsIgnoreCase(Constantes.SATELITE_KENOBI) ) {
-			positionTO.setX(kenobi.getPunto().getX());
-			positionTO.setY(kenobi.getPunto().getY());
-			salida.setPosition(positionTO);
-			salida.setMessage(mensaje);
-		}else if( request.getName().equalsIgnoreCase(Constantes.SATELITE_SKYWALKER) ) {
-			positionTO.setX(skywalker.getPunto().getX());
-			positionTO.setY(skywalker.getPunto().getY());
-			salida.setPosition(positionTO);
-			salida.setMessage(mensaje);
-		}else if( request.getName().equalsIgnoreCase(Constantes.SATELITE_SATO) ){
-			positionTO.setX(sato.getPunto().getX());
-			positionTO.setY(sato.getPunto().getY());
-			salida.setPosition(positionTO);
-			salida.setMessage(mensaje);
-		}else {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, null);
+		if( request != null ) {
+			listQuasarTo.add(request);
+			PositionTO positionTO = new PositionTO();
+			String mensaje = obtenerMensaje.GetMessage(listQuasarTo);
+			
+			if( request.getName().equalsIgnoreCase(Constantes.SATELITE_KENOBI) ) {
+				positionTO.setX(kenobi.getPunto().getX());
+				positionTO.setY(kenobi.getPunto().getY());
+				salida.setPosition(positionTO);
+				salida.setMessage(mensaje);
+			}else if( request.getName().equalsIgnoreCase(Constantes.SATELITE_SKYWALKER) ) {
+				positionTO.setX(skywalker.getPunto().getX());
+				positionTO.setY(skywalker.getPunto().getY());
+				salida.setPosition(positionTO);
+				salida.setMessage(mensaje);
+			}else if( request.getName().equalsIgnoreCase(Constantes.SATELITE_SATO) ){
+				positionTO.setX(sato.getPunto().getX());
+				positionTO.setY(sato.getPunto().getY());
+				salida.setPosition(positionTO);
+				salida.setMessage(mensaje);
+			}else {
+				throw new ResponseStatusException(HttpStatus.NOT_FOUND, null);
+			}
 		}
 		
 		return salida;
@@ -93,7 +96,7 @@ public class wsTopSecretSplitImpl implements IwsTopSecretSplit{
 		ResponseTO salida = new ResponseTO();
 		PositionTO positionTO = new PositionTO();
 		
-		if( name != null && !name.isEmpty() ) {
+		if( (name != null && !name.isEmpty()) && responseSplitTO != null ) {
 			quasarTO quasarTO = new quasarTO();
 			quasarTO.setDistance(responseSplitTO.getDistance());
 			quasarTO.setMessage(responseSplitTO.getMessage());
@@ -121,7 +124,7 @@ public class wsTopSecretSplitImpl implements IwsTopSecretSplit{
 				throw new ResponseStatusException(HttpStatus.NOT_FOUND, null);
 			}
 		}else {
-			throw new ResponseStatusException(HttpStatus.NOT_FOUND, null);
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, null);
 		}
 		
 		return salida;

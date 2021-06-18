@@ -8,6 +8,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.mercadoLibre.quasar.operation.entity.Usuarios;
 import com.mercadoLibre.quasar.operation.mapper.UsuarioMapper;
@@ -35,22 +36,28 @@ public class wsUsuariosImpl implements IwsUsuarios{
 
 	@Override
 	public ResponseEntity<UsuarioTO> crearUsuario(CreacionUsuarioTO user) {
-		Random random = new Random();
-		Integer numero = random.nextInt(Constantes.RANGO_RANDOM);
-		Usuarios usuario = new Usuarios();
-		usuario.setNombreUsuario(Constantes.INICIAL_USUARIO.concat(numero.toString()));
-		usuario.setClave(encoder.encode(user.getClave()));
-		usuario.setEstado(Constantes.ESTADO_ACTIVO);
-		usuario.setFechaCreacion(new Date());
-		usuario.setPrimerApellido(user.getPrimerApellido());
-		usuario.setSegundoApellido(user.getSegundoApellido());
-		usuario.setPrimerNombre(user.getPrimerNombre());
-		usuario.setSegundoNombre(user.getSegundoNombre());
-		usuario.setUsuarioCreacion(Constantes.USUARIO_CREACION);
-		usuario.setFechaModificacion(null);
-		usuario.setUsuarioModificacion(null);
-		Usuarios salida = repository.save(usuario);
-		return new ResponseEntity<UsuarioTO>(mapper.usuarioToUsuarioDto(salida), HttpStatus.OK);
+		
+		if( user != null ) {
+			Random random = new Random();
+			Integer numero = random.nextInt(Constantes.RANGO_RANDOM);
+			Usuarios usuario = new Usuarios();
+			usuario.setNombreUsuario(Constantes.INICIAL_USUARIO.concat(numero.toString()));
+			usuario.setClave(encoder.encode(user.getClave()));
+			usuario.setEstado(Constantes.ESTADO_ACTIVO);
+			usuario.setFechaCreacion(new Date());
+			usuario.setPrimerApellido(user.getPrimerApellido());
+			usuario.setSegundoApellido(user.getSegundoApellido());
+			usuario.setPrimerNombre(user.getPrimerNombre());
+			usuario.setSegundoNombre(user.getSegundoNombre());
+			usuario.setUsuarioCreacion(Constantes.USUARIO_CREACION);
+			usuario.setFechaModificacion(null);
+			usuario.setUsuarioModificacion(null);
+			Usuarios salida = repository.save(usuario);
+			return new ResponseEntity<UsuarioTO>(mapper.usuarioToUsuarioDto(salida), HttpStatus.OK);
+		}else {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, null);
+		}
+
 	}
 
 }

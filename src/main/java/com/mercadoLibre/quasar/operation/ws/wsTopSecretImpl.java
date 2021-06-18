@@ -1,8 +1,9 @@
 package com.mercadoLibre.quasar.operation.ws;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.mercadoLibre.quasar.operation.to.CircunferenciaTO;
 import com.mercadoLibre.quasar.operation.to.PositionTO;
@@ -32,20 +33,24 @@ public class wsTopSecretImpl implements IwsTopSecret{
 		String mensaje = null;
 		ResponseTO response = new ResponseTO();
 		PositionTO position = new PositionTO();
-		
-        PuntoTO kenobi = new PuntoTO(-500, -200);
-        PuntoTO skywalker = new PuntoTO(100, -100);
-        PuntoTO sato = new PuntoTO(500, 100);
-        
-        CircunferenciaTO circunferecia = calculoCircunferencia.calcularCentro(kenobi, skywalker, sato);
-        
-        position.setX(circunferecia.getCentro().getPunto().getX());
-        position.setY(circunferecia.getCentro().getPunto().getY());
 
-        mensaje = obtenerMensaje.GetMessage(request.getSatellites());        	
-		
-		response.setPosition(position);
-		response.setMessage(mensaje);
+		if( request != null ) {
+	        PuntoTO kenobi = new PuntoTO(-500, -200);
+	        PuntoTO skywalker = new PuntoTO(100, -100);
+	        PuntoTO sato = new PuntoTO(500, 100);
+	        
+	        CircunferenciaTO circunferecia = calculoCircunferencia.calcularCentro(kenobi, skywalker, sato);
+	        
+	        position.setX(circunferecia.getCentro().getPunto().getX());
+	        position.setY(circunferecia.getCentro().getPunto().getY());
+
+	        mensaje = obtenerMensaje.GetMessage(request.getSatellites());        	
+			
+			response.setPosition(position);
+			response.setMessage(mensaje);
+		}else {
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, null);
+		}
 		
 		return response;
 		

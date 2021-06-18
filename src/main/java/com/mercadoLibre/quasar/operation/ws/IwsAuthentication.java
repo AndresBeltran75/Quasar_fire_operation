@@ -1,7 +1,6 @@
 package com.mercadoLibre.quasar.operation.ws;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +13,6 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
-//@CrossOrigin(origins = "*")
 @RequestMapping("/auth")
 @Api(description = "Web service authentication users")
 public interface IwsAuthentication {
