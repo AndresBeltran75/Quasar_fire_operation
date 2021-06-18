@@ -27,7 +27,7 @@ https://quasar-operation-fire-meli.herokuapp.com/quasar-operation/api/auth/authe
 ```
 {
     "password": "QuasarOperation*",
-    "username": "MELI86263"
+    "username": "MELI86263
 }
 ```
 
