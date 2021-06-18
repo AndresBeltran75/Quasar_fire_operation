@@ -10,11 +10,18 @@ La Api se encuentra expuesta en Heroku y hace uso de una base de datos Postgres 
 # Uso del Api
 
 ## Generar Token
-La generación del token para realizar peticiones de manera segura se puede hacer de dos maneras:
+La generación del token para realizar peticiones de forma segura se puede hacer de dos maneras:
 
-* Se ingresa a la siguiente ***URL:*** https://quasar-operation-front.herokuapp.com/, se llena el formulario el cual consta de nombre de usuario y contraseña, obteniendo el token para realizar las peticiones deseadas.
+1. Se ingresa a la siguiente ***URL:*** https://quasar-operation-front.herokuapp.com/, se llena el formulario el cual consta de nombre de usuario y contraseña; para está prueba puede utilizar los siguientes datos:
 
-* Desde postman realizar una petición ***POST*** indicando el siguiente endpoint el cual se encarga de generar el token para un usuario determinado:
+```
+    Nombre Usuario:  QuasarOperation*
+    Contraseña    :  MELI86263"
+```
+
+* obtendrá el token para realizar las peticiones deseadas.
+
+2. Desde postman realizar una petición ***POST*** indicando el siguiente endpoint el cual se encarga de generar el token para un usuario determinado:
 https://quasar-operation-fire-meli.herokuapp.com/quasar-operation/api/auth/authenticate
 * En las sección body de Postman utilice la siguiente estructura Json para realizar la petición:
 ```
