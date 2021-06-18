@@ -8,6 +8,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.server.ResponseStatusException;
 
 import com.mercadoLibre.quasar.operation.configuration.UserConfiguration;
 import com.mercadoLibre.quasar.operation.to.AuthenticationRequest;
@@ -29,10 +30,15 @@ public class wsAuthenticationImpl implements IwsAuthentication{
 	@Override
 	public ResponseEntity<AuthenticationResponse> createToken(AuthenticationRequest request) {
         try {
-            authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword()));
-            UserDetails userDetails = platziUserDetailsService.loadUserByUsername(request.getUsername());
-            String jwt = jwtUtil.generateToken(userDetails);
-            return new ResponseEntity<>(new AuthenticationResponse(jwt), HttpStatus.OK);
+        	if( request != null ) {
+	    		authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword()));
+	            UserDetails userDetails = platziUserDetailsService.loadUserByUsername(request.getUsername());
+	            String jwt = jwtUtil.generateToken(userDetails);
+	            return new ResponseEntity<>(new AuthenticationResponse(jwt), HttpStatus.OK);
+        	}else {
+        		throw new ResponseStatusException(HttpStatus.BAD_REQUEST, null);
+        	}
+            
         } catch (BadCredentialsException e) {
             return new ResponseEntity<>(HttpStatus.FORBIDDEN);
         }
