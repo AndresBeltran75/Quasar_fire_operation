@@ -16,7 +16,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
-@CrossOrigin(origins = "*")
+//@CrossOrigin(origins = "*")
 @Api(description = "Web service top secret split")
 @RequestMapping("topsecret_split")
 public interface IwsTopSecretSplit {
