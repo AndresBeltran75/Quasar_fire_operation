@@ -15,8 +15,8 @@ La generación del token para realizar peticiones de forma segura se puede hacer
 1. Se ingresa a la siguiente ***URL:*** https://quasar-operation-front.herokuapp.com/, se llena el formulario el cual consta de nombre de usuario y contraseña; para está prueba puede utilizar los siguientes datos:
 
 ```
-    Nombre Usuario:  QuasarOperation*
-    Contraseña    :  MELI86263
+    Nombre Usuario: MELI86263 
+    Contraseña    : QuasarOperation*
 ```
 
 * obtendrá el token para realizar las peticiones deseadas.
