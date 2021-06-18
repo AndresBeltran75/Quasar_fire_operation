@@ -202,6 +202,19 @@ Los endpoint para consumir las utilidades del Api desde Postman son:
        
  * Ahora se puede refrescar la página, pudiendo visualizar la documentación del Api.
 
+# Ejecutar código de manera local
+
+* Se debe clonar el código fuente, de la siguiente manera:
+
+    ```
+        git clone https://github.com/AndresBeltran75/Quasar_fire_operation.git
+    ```
+* Se importa el proyecto en su ***IDE*** de preferencia.
+
+* En su ***IDE*** de preferencia, de click derecho sobre el proyecto recientemente importado, diríjase a Maven/Update Project... 
+
+* Esto actualizara las dependencias del proyecto, para su correcto funcionamiento.
+
 # Observaciones
 
 * Luego de que evidencie el funcionamiento del Api, acceda a la extensión ***ModHeader*** de Google Chrome y desactive el check que aparece en color verde, para que no tenga problemas al momento de usar el navegador como lo hace normalmente.
