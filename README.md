@@ -1,5 +1,5 @@
 # Challenge Quasar Fire Operation
-Esté challenge se desarrollo en lenguaje de programación Java, implementando arquitectura orientada a microservicios para lo cual se hizo uso del framework ***Spring Boot***, tambien se implemento ***Swagger*** para realizar la documentación de los servicios expuestos por el Api, a su vez se implemento ***JWT*** para la autenticación al realizar peticiones.
+Esté challenge se desarrollo en lenguaje de programación Java, implementando arquitectura orientada a microservicios para lo cual se hizo uso del framework ***Spring Boot***, se implemento ***Swagger*** para realizar la documentación de los servicios expuestos por el Api, tambien se implemento ***JWT*** para la autenticación al realizar peticiones, a su vez se emplemento un pequeño FrontEnd en ***Angular*** el cual permite generar el token de forma más sencilla.
 
 La Api se encuentra expuesta en Heroku y hace uso de una base de datos Postgres la cual se encarga de almacenar los usuarios para generar el token de autenticación.
 
@@ -9,7 +9,19 @@ La Api se encuentra expuesta en Heroku y hace uso de una base de datos Postgres 
 
 # Uso del Api
 
-* Desde postman realizar una petición ***POST*** indicando el siguiente endpoint el cual se encarga de generar el token para un usuario determinado:
+## Generar Token
+La generación del token para realizar peticiones de forma segura se puede hacer de dos maneras:
+
+1. Se ingresa a la siguiente ***URL:*** https://quasar-operation-front.herokuapp.com/, se llena el formulario el cual consta de nombre de usuario y contraseña; para está prueba puede utilizar los siguientes datos:
+
+```
+    Nombre Usuario: MELI86263 
+    Contraseña    : QuasarOperation*
+```
+
+* obtendrá el token para realizar las peticiones deseadas.
+
+2. Desde postman realizar una petición ***POST*** indicando el siguiente endpoint el cual se encarga de generar el token para un usuario determinado:
 https://quasar-operation-fire-meli.herokuapp.com/quasar-operation/api/auth/authenticate
 * En las sección body de Postman utilice la siguiente estructura Json para realizar la petición:
 ```
@@ -31,6 +43,8 @@ https://quasar-operation-fire-meli.herokuapp.com/quasar-operation/api/auth/authe
 ```
 eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJNRUxJODYyNjMiLCJpYXQiOjE2MjM4ODY2OTgsImV4cCI6MTYyMzg4Njk5OH0.gCXafJEqhoxgyxCW05hAU-mqzQIM1LqySqaB3b_HyLw
 ```
+
+## EndPoint de consumo
 Los endpoint para consumir las utilidades del Api desde Postman son:
 * https://quasar-operation-fire-meli.herokuapp.com/quasar-operation/api/topsecret/status ***(GET)***
   
@@ -177,7 +191,7 @@ Los endpoint para consumir las utilidades del Api desde Postman son:
           }
         ```
         
- # Swagger
+ ## Swagger
 
 * El endpoint para ver la documentación de Swagger es: https://quasar-operation-fire-meli.herokuapp.com/quasar-operation/api/swagger-ui.html
 
@@ -194,6 +208,19 @@ Los endpoint para consumir las utilidades del Api desde Postman son:
        ```
        
  * Ahora se puede refrescar la página, pudiendo visualizar la documentación del Api.
+
+# Ejecutar código de manera local
+
+* Se debe clonar el código fuente, de la siguiente manera:
+
+    ```
+        git clone https://github.com/AndresBeltran75/Quasar_fire_operation.git
+    ```
+* Se importa el proyecto en su ***IDE*** de preferencia.
+
+* En su ***IDE*** de preferencia, de click derecho sobre el proyecto recientemente importado, diríjase a Maven/Update Project... 
+
+* Esto actualizara las dependencias del proyecto, para su correcto funcionamiento.
 
 # Observaciones
 
