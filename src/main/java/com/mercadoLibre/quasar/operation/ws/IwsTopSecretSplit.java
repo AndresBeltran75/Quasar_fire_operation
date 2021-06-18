@@ -1,5 +1,6 @@
 package com.mercadoLibre.quasar.operation.ws;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,10 +16,12 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
+@CrossOrigin(origins = "*")
 @Api(description = "Web service top secret split")
 @RequestMapping("topsecret_split")
 public interface IwsTopSecretSplit {
 
+	@CrossOrigin(origins = "*")
 	@GetMapping("/status")
 	@ApiOperation(value = "Get status service to determine if it is active")
 	@ApiResponses({
@@ -27,6 +30,7 @@ public interface IwsTopSecretSplit {
 	})
 	public String status();
 	
+	@CrossOrigin(origins = "*")
 	@GetMapping("/")
 	@ApiOperation(value = "Get top secret split service service response")
 	@ApiResponses({
@@ -35,6 +39,7 @@ public interface IwsTopSecretSplit {
 	})
 	public ResponseTO obtenerMensajePosicion();
 	
+	@CrossOrigin(origins = "*")
 	@PostMapping("/")
 	@ApiOperation(value = "Get responde top secret split service")
 	@ApiResponses({
@@ -43,6 +48,7 @@ public interface IwsTopSecretSplit {
 	})
 	public ResponseTO datosPorSaltelite(@RequestBody quasarTO request);
 	
+	@CrossOrigin(origins = "*")
 	@PostMapping("/{satellite_name}")
 	@ApiOperation(value = "Get top secret split service response for a specific vessel")
 	@ApiResponses({
